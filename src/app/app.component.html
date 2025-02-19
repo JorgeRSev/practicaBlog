@@ -7,10 +7,10 @@
 </head>
 <body class="contenedor">
   <section>
-    <app-formulario></app-formulario>
+    <app-formulario (eventoEnviarData)="manejadorDatosFormulario($event)"></app-formulario>
   </section>
   <section>
-    <app-informacion></app-informacion>
+    <app-informacion [datos]="arrayNoticias"></app-informacion>
   </section>
 </body>
 </html>

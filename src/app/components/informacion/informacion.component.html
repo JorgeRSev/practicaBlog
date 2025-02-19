@@ -1,1 +1,10 @@
+<h2>Información Recibida:</h2>
 
+<ng-container *ngFor="let noticia of datos">
+  <hr>
+  <p><strong>Título:</strong> {{ noticia.titulo }}</p>
+  <p><strong>Imagen:</strong></p>
+  <img [src]="noticia.imagen" alt="Imagen de la noticia" style="max-width: 300px;">
+  <p><strong>Cuerpo:</strong> {{ noticia.cuerpoNoticia }}</p>
+  <p><strong>Fecha:</strong> {{ noticia.fecha | date:'dd/MM/yyyy' }}</p>
+</ng-container>

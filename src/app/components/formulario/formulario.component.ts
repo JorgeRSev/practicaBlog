@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { INoticias } from '../../interfaces/inoticias.interface';
 
 @Component({
   selector: 'app-formulario',
@@ -28,10 +29,14 @@ export class FormularioComponent {
     }, [])
   }
 
-  cargarInformacion(){
 
-    console.log(this.formularioNoticia.value)
+  @Output() eventoEnviarData = new EventEmitter<INoticias>()
 
+  // Tengo que hacer un output para mandar los datos del formulario al padre para poder 
+  // utilizarlos en el otro componente hijo
+  cargarInformacion(event: Event){
+    this.eventoEnviarData.emit(this.formularioNoticia.value)
+    this.formularioNoticia.reset()
   }
 
 }

@@ -1,5 +1,5 @@
 <section class="contenedorFormulario">
-  <form action="" class="formulario" [formGroup]="formularioNoticia" (ngSubmit)="cargarInformacion()">
+  <form action="" class="formulario" [formGroup]="formularioNoticia" (ngSubmit)="cargarInformacion($event)">
     <div>
       <label for="titulo">Título</label>
       <input type="text" id="titulo" formControlName="titulo">

@@ -13,15 +13,21 @@ export class AppComponent {
   arrayNoticias: INoticias[] = [
     {
       titulo: 'Mi perro',
-    imagen: 'url',
-    cuerpoNoticia: 'Mi perro tumbado en el sofa',
-    fecha: new Date('09/01/1992'),
+      imagen: 'url',
+      cuerpoNoticia: 'Mi perro tumbado en el sofa',
+     fecha: new Date('09/01/1992'),
     },
     {
-    titulo: 'Mi gato',
-    imagen: 'url',
-    cuerpoNoticia: 'Mi gato tumbado en el sofa',
-    fecha: new Date('09/10/1998'),
+      titulo: 'Mi gato',
+      imagen: 'url',
+      cuerpoNoticia: 'Mi gato tumbado en el sofa',
+      fecha: new Date('09/10/1998'),
     }
   ]
+
+  datosFormulario!: INoticias;
+
+  manejadorDatosFormulario(datos: INoticias){
+    this.arrayNoticias.push(datos);
+  }
 }
