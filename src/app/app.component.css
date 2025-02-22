@@ -1,3 +1,26 @@
-.contenedor{
-  flex-direction: column;
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.navBar{
+  border-bottom: 2px solid lightsalmon;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.headerBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo{
+  font-size: 130%;
+  font-weight: 700;
+  color: lightsalmon;
+}
+
+.btn-Hd{
+  border: none
 }

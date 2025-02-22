@@ -1,20 +1,9 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: content-box;
+textarea{
+  resize: none
 }
 
-.contenedorFormulario{
-  width: 30rem;
-}
-
-.formulario div{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 6px;
-  
-  input, label{
-    padding: 6px;
-  }
-  
+.formulario{
+  padding-bottom: 16px;
+  padding-left: 12px;
+  border-bottom: 2px solid lightsalmon;
 }

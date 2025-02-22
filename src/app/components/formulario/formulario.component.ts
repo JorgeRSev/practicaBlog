@@ -32,9 +32,7 @@ export class FormularioComponent {
 
   @Output() eventoEnviarData = new EventEmitter<INoticias>()
 
-  // Tengo que hacer un output para mandar los datos del formulario al padre para poder 
-  // utilizarlos en el otro componente hijo
-  cargarInformacion(event: Event){
+  cargarInformacion(){
     this.eventoEnviarData.emit(this.formularioNoticia.value)
     this.formularioNoticia.reset()
   }
