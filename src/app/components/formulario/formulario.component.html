@@ -1,0 +1,24 @@
+<section class="container">
+  <h3>Añada su noticia</h3>
+  <form action="" class="formulario" [formGroup]="formularioNoticia" (ngSubmit)="cargarInformacion()">
+    <div class="form-group mb-3">
+      <label for="titulo">Título</label>
+      <input class="form-control" type="text" id="titulo" formControlName="titulo">
+    </div>
+    <div class="form-group mb-3">
+      <label for="imagen">Introduzca la URL de la imagen</label>
+      <input class="form-control" type="text" id="imagen" formControlName="imagen">
+    </div>
+    <div class="form-group mb-3">
+      <label for="cuerpoNoticia">Cuerpo de la noticia</label>
+      <textarea class="form-control" name="cuerpoNoticia" id="" formControlName="cuerpoNoticia" rows="4"></textarea>
+    </div>
+    <div class="form-group mb-3">
+      <label for="fecha">Fecha de la publicación</label>
+      <input class="form-control" type="date" id="fecha" formControlName="fecha">
+    </div>
+    <div class="form-group">
+      <input class="btn btn-primary px-4" type="submit" id="enviarNoticia" [disabled]="formularioNoticia.invalid">
+    </div>
+  </form>
+</section>
