@@ -24,6 +24,7 @@ article{
 }
 
 .contenedorImagen{
+  display: none;
   width: 25%;
   height: 100%;
 }
@@ -38,7 +39,7 @@ article{
 }
 
 .noticia{
-  width: 75%;
+  width: 100%;
   padding: 20px;
 }
 
@@ -51,8 +52,9 @@ article{
 
 .cuerpoNoticia{
   max-height: 250px;
-  overflow-y: auto;
+  overflow-y: scroll;
   line-height: 1.8;
+  padding-right: 16px;
 }
 
 .fechaNoticia{
@@ -62,4 +64,18 @@ article{
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .noticia{
+    width: 75%;
+  }
+  
+  .contenedorImagen{
+    display: flex;
+  }
+
+  .cuerpoNoticia{
+    padding-right: 0;
+    overflow-y: auto;
+  }
+} 
 

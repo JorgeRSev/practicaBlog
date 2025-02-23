@@ -22,5 +22,11 @@
 }
 
 .btn-Hd{
-  border: none
+  border: none;
+  background-color: #fff;
+}
+
+.btn-Hd:hover{
+  color: lightsalmon;
+  font-weight: 700;
 }
